@@ -116,7 +116,8 @@ $\begin{matrix}
 \end{matrix}$
 
 First goal, show that:
-${S(y(q))\over x} = 1 - e^{-(q + \alpha(x))} + 
+$(2)\;\;\;
+{S(y(q))\over x} = 1 - e^{-(q + \alpha(x))} + 
 O(e^{-2q})$ as $q \to \infty$
 
 From Taylor theorem:
@@ -200,6 +201,41 @@ $\Rightarrow S'(x) + \frac{S(x)}{x} \le 0$
 
 ${-xS'(x)\over S(x)} \ge 1$
 $\Rightarrow \alpha(x) \ge 0$
+
+$(2)\;\;\;
+{S(y(q))\over x} = {S(x)\over y(q + \alpha(x))} + 
+m(q),$ where
+$m(q) = O(e^{-2q})$ as $q \to \infty$
+
+$e^{g(q)} = \frac{S\bigl(
+{S(x)\over y(q + \alpha(x))} + m(q)
+\bigr)}
+{S\bigr( {S(x)\over y(q + \alpha(x))} \bigl)} =
+\frac{S(1 - e^{-(q + \alpha(x))} +  m(q))}
+{S(1 - e^{-(q + \alpha(x))})}$
+
+$l(q) := 1 - e^{-(q + \alpha(x))}$
+
+It looks a lot like $e^{g(q)} \to 1$ as $q \to \infty$
+How does one prove this?
+
+By definition of limit, we wish to show that for any $\epsilon \gt 0 \;\; \exists q_0$ s.t.  
+$|e^{g(q)} - 1| < \epsilon \;\; \forall q \ge q_0$
+
+$e^{g(q)} - 1 = \frac{S\big(l(q) + m(q)\big) - S(l(q))}{S(l(q))}$
+
+$h := m(q)$
+$y(q) = {S(x)\over 1 - e^{-q}}$ is strictly decreasing.
+
+${S(y(q))\over x}$ is thus strictly increasing.
+It approaches 1 as $q \to \infty$
+..
+.
+.
+.
+.
+.
+.
 
 $1 - e^{-(q + \alpha(x))} \ge 1 - e^{-q}$
 
